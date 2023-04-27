@@ -1,9 +1,6 @@
 from django.db import models
-#این ایمپورت پایین برای کار های ترنسلیت کردن میباشد
 from django.utils.translation import ugettext_lazy as _
 
-
-#در این قسمت ما برای کتگوری در دیتابیس فضا رزرو میکنیم
 
 class Category(models.Model):
     title = models.CharField(verbose_name=_("title"),max_length=50)
@@ -15,7 +12,6 @@ class Category(models.Model):
     update_time = models.DateTimeField(verbose_name=_("update time"),auto_now=True)
     
     class Meta:
-        #اسم تیبلی که برای کاتگوری در دیتابیس در نظر گرفته میشود است
         db_table = "categories"
         verbose_name = _("category")
         verbose_name_plural = _("categories")
@@ -23,7 +19,6 @@ class Category(models.Model):
     def __str__(self):
         return self.title
     
-#در این قسمت ما برای فقط فیلم و اطلاعات شخصی فیلم در دیتابیس فضا رزرو کردیم 
    
 class Products(models.Model):
     title = models.CharField(_("title"),max_length=50)
@@ -42,8 +37,6 @@ class Products(models.Model):
     def __str__(self):
         return self.title
         
-#ما برای اینکه هر فیلم میتواند چندین تا قسمت داشته باشد یک دیتابیس براش در نظر میگیریم که کار دخیرهسازی آسان تر شود 
-#وهر فایل که آپلود کردیم را به یک محصول فارنکی میکنیم      
 class File(models.Model):
     FILE_AUDIO = 1
     FILE_VIDEO = 2

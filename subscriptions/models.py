@@ -17,7 +17,6 @@ class Package(models.Model):
     update_time = models.DateTimeField(verbose_name=_("update time"),auto_now=True)
 
     class Meta:
-        #اسم تیبلی که برای پکیج در دیتابیس در نظر گرفته میشود است
         db_table = "packages"
         verbose_name = _("package")
         verbose_name_plural = _("packages")
@@ -34,7 +33,6 @@ class Subscription(models.Model):
     
     
     class Meta:
-        #اسم تیبلی که برای کاتگوری در دیتابیس در نظر گرفته میشود است
         db_table = "Subscriptions"
         verbose_name = _("Subscription")
         verbose_name_plural = _("Subscriptions")
