@@ -14,18 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('products/',include('products.urls')),
-    path('users/',include('users.urls')),
-    path('payment/',include('payments.urls')),
-    path('subscription/',include('subscriptions.urls')),
-    
+    path('products/', include('products.urls')),
+    path('users/', include('users.urls')),
+    path('payment/', include('payments.urls')),
+    path('subscription/', include('subscriptions.urls')),
+
 ]
-#این خط برای این هستش که وقتی ما روی لینک های عکس و فیلم میزنیم آنها را برایمان باز کند
-#و این نباید در پروژه اصلی باشد و برای چک کردن بکار میرود
-urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+
+# urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

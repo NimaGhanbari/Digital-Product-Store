@@ -4,7 +4,6 @@ from django.shortcuts import render
 #local
 from .models import Gateway,Payment
 from .serializer import GatewaySerializer
-
 from subscriptions.models import Package,Subscription
 
 #Rest Framework

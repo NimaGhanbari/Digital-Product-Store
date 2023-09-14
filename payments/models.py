@@ -12,7 +12,6 @@ class Gateway(models.Model):
     update_time = models.DateTimeField(verbose_name=_("update time"),auto_now=True)
     
     class Meta:
-        #اسم تیبلی که برای پکیج در دیتابیس در نظر گرفته میشود است
         db_table = "Gateways"
         verbose_name = _("Gateway")
         verbose_name_plural = _("Gateways")
@@ -54,7 +53,6 @@ class Payment(models.Model):
     update_time = models.DateTimeField(verbose_name=_("update time"),auto_now=True)
     
     class Meta:
-        #اسم تیبلی که برای پکیج در دیتابیس در نظر گرفته میشود است
         db_table = "Payments"
         verbose_name = _("Payment")
         verbose_name_plural = _("Payments")
